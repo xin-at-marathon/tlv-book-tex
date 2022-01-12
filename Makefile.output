@@ -6,4 +6,4 @@ SOURCES = $(addprefix $(VIEW_DIR)/, src/index.ins src/index.dtx)
 CLSFILE = $(addprefix $(OUTPUT_DIR)/, dtx-style.sty index.cls)
 
 $(CLSFILE): $(SOURCES)
-	docker run -it --rm -v $$(PWD):/data bryt/texlive xelatex $<
+	docker run -it --rm -v $(PWD):/data bryt/texlive xelatex $<
