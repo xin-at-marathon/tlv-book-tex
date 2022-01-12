@@ -1,0 +1,10 @@
+VIEW_DIR := deps/tlv-book-tex
+OUTPUT_DIR := output/foobar
+
+SOURCES = $(addprefix $(VIEW_DIR)/, src/index.ins src/index.dtx)
+
+CLSFILE = $(addprefix $(OUTPUT_DIR)/, dtx-style.sty index.cls)
+
+$(CLSFILE): $(SOURCES)
+	xetex $<
+
