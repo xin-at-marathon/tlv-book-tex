@@ -99,12 +99,22 @@
                 {
                     "fieldname": "Type",
                     "fieldtype": "OneLineText"
+                },
+                {
+                    "fieldname": "Theme",
+                    "fieldtype": "OneLineText"
                 }
             ],
             "formatname": "document",
             "icon": "book_1",
             "outputlines": [
-                "{*Name*}"
+                "% !TeX encoding = UTF-8",
+                "% !TeX program = xelatex",
+                "% !TeX spellcheck = en_US",
+                "\\documentclass[{*Theme*}]{bookview}",
+                "\\begin{document}",
+                "",
+                "\\end{document}"
             ],
             "titleline": "{*Name*}"
         },
